@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Student Login and Registration Demo">
+  <title>Student Portal</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <section class="auth-card" id="authCard">
+      <div class="brand-icon" aria-hidden="true">🎓</div>
+      <h1>Student Portal</h1>
+      <p class="subtitle">Your learning journey starts here.</p>
+
+      <div class="tabs" role="tablist" aria-label="Account options">
+        <button type="button" id="loginTab" class="tab active" role="tab" aria-selected="true">Login</button>
+        <button type="button" id="registerTab" class="tab" role="tab" aria-selected="false">Register</button>
+      </div>
+
+      <p id="message" class="message" role="alert" aria-live="polite"></p>
+
+      <form id="loginForm" novalidate>
+        <div class="field">
+          <label for="loginEmail">Email address</label>
+          <input id="loginEmail" name="email" type="email" placeholder="student@example.com" autocomplete="username" required>
+        </div>
+        <div class="field">
+          <label for="loginPassword">Password</label>
+          <input id="loginPassword" name="password" type="password" placeholder="Enter your password" autocomplete="current-password" required>
+        </div>
+        <button class="primary-button" type="submit">Login to Portal</button>
+        <p class="switch-text">New student? <button type="button" class="text-button" id="showRegister">Create an account</button></p>
+      </form>
+
+      <form id="registerForm" novalidate hidden>
+        <div class="field">
+          <label for="studentName">Full name</label>
+          <input id="studentName" name="name" type="text" placeholder="Enter your full name" autocomplete="name" maxlength="80" required>
+        </div>
+        <div class="field">
+          <label for="registerEmail">Email address</label>
+          <input id="registerEmail" name="email" type="email" placeholder="student@example.com" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="registerPassword">Password</label>
+          <input id="registerPassword" name="password" type="password" placeholder="At least 6 characters" autocomplete="new-password" minlength="6" required>
+        </div>
+        <button class="primary-button" type="submit">Create Student Account</button>
+        <p class="switch-text">Already registered? <button type="button" class="text-button" id="showLogin">Login here</button></p>
+      </form>
+
+      <p class="demo-note">Educational demo only. Do not use a real password or personal account.</p>
+    </section>
+
+    <section class="dashboard-card" id="dashboard" hidden>
+      <div class="brand-icon" aria-hidden="true">🌟</div>
+      <p class="eyebrow">STUDENT DASHBOARD</p>
+      <h1>Welcome, <span id="dashboardName"></span>!</h1>
+      <p class="subtitle">You have successfully logged in to your student portal.</p>
+      <div class="welcome-panel">
+        <span aria-hidden="true">📚</span>
+        <div><h2>Your learning space</h2><p>You are signed in to your demo student account.</p></div>
+      </div>
+      <button class="primary-button logout-button" id="logoutButton" type="button">Logout</button>
+      <p class="demo-note">Student Login &amp; Registration System</p>
+    </section>
+  </main>
+  <footer>Made for a Software Testing assignment</footer>
+</body>
+</html>

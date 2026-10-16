@@ -1,0 +1,15 @@
+{
+  "name": "student-login-testing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Educational student login and registration demo tested with Playwright",
+  "scripts": {
+    "start": "http-server . -p 4173 -c-1",
+    "test": "playwright test",
+    "test:report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "http-server": "^14.1.1"
+  }
+}
